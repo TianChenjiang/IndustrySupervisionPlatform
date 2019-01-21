@@ -1,0 +1,20 @@
+<view class='container' >
+  <block wx:for='{{buttonlist}}' wx:for-item='item'>
+    <button class='buttonstyle {{item.color}}' bindtap='{{item.func}}'>
+      <text class='title'>{{item.title}}</text>
+      <text class='detail'>{{item.detail}}</text>
+    </button>
+  </block>
+  <!-- <button class='buttonstyle red'>
+    <text class='title'>设备维护监测\n</text>
+    <text class='detail'>查看设备状态详细数据</text>
+  </button>
+  <button class='buttonstyle blue'>
+    <text class='title'>工位Ⅰ监测\n</text>
+    <text class='detail'>查看工位Ⅰ到达产品数量等详细数据</text>
+  </button>
+  <button class='buttonstyle yellow'>
+    <text class='title'>工位Ⅱ监测\n</text>
+    <text class='detail'>查看工位2到达产品数量等详细数据</text>
+  </button> -->
+</view>

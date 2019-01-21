@@ -1,0 +1,33 @@
+{
+  "pages": [
+    "pages/homepage/homepage",
+    "pages/production/production",
+    "pages/device/device",
+    "pages/station_1/station_1",
+    "pages/station_2/station_2",
+    "pages/userCenter/userCenter",
+    "pages/login/login",
+    "pages/images/images"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "工业监测平台",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar":{
+    "selectedColor":"#666666",
+    "list":[{
+      "pagePath":"pages/homepage/homepage",
+      "iconPath":"pages/images/homePage.jpg",
+      "selectedIconPath": "pages/images/homePage.jpg",
+      "text":"首页"
+    },
+    {
+      "pagePath": "pages/userCenter/userCenter",
+      "iconPath": "pages/images/userCenter.jpg",
+      "selectedIconPath": "pages/images/userCenter.jpg",
+      "text": "个人中心"
+    }]
+  }
+}
