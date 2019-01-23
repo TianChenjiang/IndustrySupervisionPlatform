@@ -95,7 +95,7 @@ Page({
    */
 
   clickTo_production:function(){
-    if (app.globalData.userinfo == null) {
+    if (!app.globalData.hasLogin) {
       wx.redirectTo({
         url: '../login/login',
       })
@@ -106,7 +106,7 @@ Page({
     }
   },
   clickTo_device: function () {
-    if (app.globalData.userinfo == null) {
+    if (!app.globalData.hasLogin) {
       wx.redirectTo({
         url: '../login/login',
       })
@@ -117,7 +117,8 @@ Page({
     }
   },
   clickTo_station_1: function () {
-    if (app.globalData.userinfo == null) {
+    if (!app.globalData.hasLogin) {
+      console.log('hhhhh')
       wx.redirectTo({
         url: '../login/login',
       })
@@ -128,7 +129,7 @@ Page({
     }
   },
   clickTo_station_2: function () {
-    if (app.globalData.userinfo == null) {
+    if (!app.globalData.hasLogin) {
       wx.redirectTo({
         url: '../login/login',
       })

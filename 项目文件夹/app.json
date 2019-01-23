@@ -6,8 +6,7 @@
     "pages/station_1/station_1",
     "pages/station_2/station_2",
     "pages/userCenter/userCenter",
-    "pages/login/login",
-    "pages/images/images"
+    "pages/login/login"
   ],
   "window": {
     "backgroundTextStyle": "light",

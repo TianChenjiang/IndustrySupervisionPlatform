@@ -1,4 +1,3 @@
-
 var app = getApp();
 Page({
 
@@ -74,28 +73,50 @@ Page({
   radioChange:function(event) {
     this.setData({identity:event.detail.value})
   },
+
+  usernameInput: function (event) {
+    this.setData({ username: event.detail.value })
+  },
+  passwordInput: function (event) {
+    this.setData({ password: event.detail.value })
+  },
+
   /**
    * 点击登录
    */
-  loginClick:function(){
-
-    //todo 服务器判断账号密码是否匹配
-  
-    app.globalData.userinfo = {
-      username:this.data.username,
-      password:this.data.password,
-      identity:this.data.identity
-    }
-
-    wx.redirectTo({
-      url: '../userCenter/userCenter',
+  loginClick: function() {
+    app.globalData.hasLogin = true
+    console.log('login')
+    
+    wx.switchTab({
+      url: '../homepage/homepage',
     })
-
+    //连接服务器端获得账号和密码认证
+    // var that = this
+    // wx.request({
+    //   url: app.globalData.backendUrl,  //todo
+    //   method: "GET",
+    //   header: {
+    //     'content-type': 'application/x-www-form-urlencoded' 
+    //   },
+    //   data: {
+    //     username: this.data.username,
+    //     password: this.data.password,
+    //     identity: this.data.identity,
+    //   },
+    //   success: function(res) {
+    //     console.log(res.data)
+    //     if(res.statusCode == 200) {
+    //       wx.navigateTo({
+    //         url: "../userCenter/userCenter"
+    //       })
+    //     } else {
+    //       wx.showToast({
+    //         title: "密码错误",
+    //       })
+    //     }
+    //   }
+    // })
   },
-  usernameInput:function(event){
-    this.setData({username:event.detail.value})
-  },
-  passwordInput:function(event){
-    this.setData({password:event.detail.value})
-  }
+  
 })
