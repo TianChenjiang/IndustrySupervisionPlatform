@@ -100,7 +100,7 @@ Page({
         url: '../login/login',
       })
     }else{
-      wx.redirectTo({
+      wx.navigateTo({
         url: '../production/production',
       })
     }
@@ -111,7 +111,7 @@ Page({
         url: '../login/login',
       })
     } else {
-      wx.redirectTo({
+      wx.navigateTo({
         url: '../device/device',
       })
     }
@@ -123,7 +123,7 @@ Page({
         url: '../login/login',
       })
     } else {
-      wx.redirectTo({
+      wx.navigateTo({
         url: '../station_1/station_1',
       })
     }
@@ -134,7 +134,7 @@ Page({
         url: '../login/login',
       })
     } else {
-      wx.redirectTo({
+      wx.navigateTo({
         url: '../station_2/station_2',
       })
     }

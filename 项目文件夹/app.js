@@ -58,6 +58,7 @@ App({
 
   
   globalData: {
+    userinfo:null,
     hasLogin: false,
     token: "",
     backenUrl: "",

@@ -5,19 +5,24 @@ Page({
    * 页面的初始数据
    */
   data: {
-    name:null
+    showName:null,
+    showIdentity:null
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    if (app.globalData.userinfo == null){
+    if (app.globalData.hasLogin == false){
       wx.redirectTo({
         url: '../login/login',
       })
     }else{
-      this.setData({name:app.globalData.userinfo.username})
+      this.setData({
+        showName:app.globalData.userinfo.username,
+        showIdentity:app.globalData.userinfo.identity
+      })
+      console.log(this.data.showName)
     }
   },
 

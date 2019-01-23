@@ -85,12 +85,24 @@ Page({
    * 点击登录
    */
   loginClick: function() {
-    app.globalData.hasLogin = true
-    console.log('login')
-    
-    wx.switchTab({
-      url: '../homepage/homepage',
-    })
+    if(this.data.username == null || this.data.password == null){
+      wx.showToast({
+        title: '输入框不能为空',
+        image: '../images/gantanhao.jpg'
+      })
+    }else{
+      app.globalData.hasLogin = true
+      console.log('login')
+      
+      //保存用户信息：账号名 & 身份信息
+      app.globalData.userinfo = {
+        username:this.data.username,
+        identity:this.data.identity
+      }
+      wx.switchTab({
+        url: '../homepage/homepage',
+      })
+    }
     //连接服务器端获得账号和密码认证
     // var that = this
     // wx.request({

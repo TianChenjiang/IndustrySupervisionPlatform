@@ -35,3 +35,8 @@
   color: green;
   padding-bottom: 20rpx;
 }
+.title{
+  font-size: 20px;
+  padding: 10px;
+  border-bottom: 5px solid teal;
+}

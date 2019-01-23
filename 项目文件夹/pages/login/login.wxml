@@ -1,5 +1,5 @@
 <view class="m-container">
-  <view class='item'>
+  <view class='item title'>
     <text>登录您的系统</text>
   </view>
   
