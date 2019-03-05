@@ -44,3 +44,8 @@
   font-size: 12px;
   margin: auto;
 }
+.warning{
+  color: red;
+  font-size: 14px;
+  margin: 2px;
+}

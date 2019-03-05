@@ -1,0 +1,45 @@
+<view class="m-container">
+  <view class='item title'>
+    <text>注册新用户</text>
+  </view>
+  
+  <view class='item'>
+    <view class='login-item'>
+      <view class='login-item-info'>用户名</view>
+      <view>
+        <input placeholder='请输入您的用户名' 
+        bindinput='usernameInput' value='{{username}}' bindblur='userNameBlur'></input>
+      </view>
+      <view class='warning' wx:if="{{showWarning}}">用户名已存在!</view>
+    </view>
+
+    <view class='login-item'>
+      <view class='login-item-info'>密码</view>
+      <view>
+        <input placeholder='请输入您的密码' 
+        password='true' bindinput='passwordInput' value='{{password}}'></input>
+      </view>
+    </view>
+
+    <view class='login-item'>
+      <view class='login-item-info'>确认密码</view>
+      <view>
+        <input placeholder='请再次输入密码' 
+        password='true' bindinput='passwordConfirm' value='{{passwordconfirm}}'></input>
+        </view>
+    </view>
+
+    <view class='login-item login-item-info'>身份</view>
+    <radio-group class='login-item'>
+      <label class="radio" wx:for="{{items}}">
+        <radio value="{{item.name}}" checked="{{item.checked}}" disabled='{{item.disabled}}'/>
+          {{item.value}}
+      </label>
+    </radio-group>
+  </view>
+
+  <view class='login-item bottom' bindtap='registerClick'>
+    <button class='login-btn' >注册</button>
+  </view>
+
+</view>

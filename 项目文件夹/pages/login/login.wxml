@@ -1,5 +1,5 @@
 <view class="m-container">
-  <view class='item'>
+  <view class='item title'>
     <text>登录您的系统</text>
   </view>
   
@@ -26,6 +26,8 @@
   <view class='login-item bottom' >
     <button class='login-btn' bindtap='loginClick'>登录</button>
   </view>
-
-
+  <view  class='register' bindtap='getRegister'>
+    没有账号？注册一个
+  </view>
+  
 </view>

@@ -1,0 +1,32 @@
+.u-container{
+  height: 100%;
+}
+
+.block1{
+  width: 100%;
+  margin-top: 100px;
+  margin-left: 25px;
+  margin-right: 25px;
+  border-bottom: 2px dashed cornflowerblue;
+  display: flex;
+  flex-direction: row;
+  /* justify-content: flex-end; */
+  /* text-align: end; */
+  align-items: flex-end;
+}
+.username{
+  font-size: 40px;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0px 20px 0px 20px;
+}
+.avatar{
+  height: 100px;
+  width: 100px;
+  border-radius: 50px;
+  /* border: 2px solid blue; */
+}
+.identity{
+  margin-top: 10px;
+  margin-left: 30px;
+  font-size: 15px;
+}
