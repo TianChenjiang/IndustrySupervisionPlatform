@@ -22,7 +22,7 @@ public class ProductionController {
         return productionBlService.getProductionById(id);
     }
 
-    @RequestMapping(value = "UpdateProductionById", method = RequestMethod.GET)
+    @RequestMapping(value = "UpdateProductionById", method = RequestMethod.POST)
     public UpdateProductionByIdResponse updateProductionById(@RequestBody UpdateProductionByIdParameter parameter){
         return productionBlService.updateProductionById(parameter);
     }

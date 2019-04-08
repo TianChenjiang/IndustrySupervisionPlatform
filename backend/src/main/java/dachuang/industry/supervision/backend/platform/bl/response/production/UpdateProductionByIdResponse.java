@@ -5,7 +5,11 @@ import lombok.Data;
 @Data
 public class UpdateProductionByIdResponse {
     private int id;
-    public UpdateProductionByIdResponse(int id){
+    private int date;
+    private String data;
+    public UpdateProductionByIdResponse(int id, int date, String data){
         this.id = id;
+        this.date = date;
+        this.data = data;
     }
 }

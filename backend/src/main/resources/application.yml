@@ -2,7 +2,7 @@ spring:
   datasource:
     url: jdbc:mysql://localhost:3306/dachuang?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC
     username: root
-    password: TIan0310
+    password: 
     driver-class-name: com.mysql.cj.jdbc.Driver
   jpa:
       hibernate:
