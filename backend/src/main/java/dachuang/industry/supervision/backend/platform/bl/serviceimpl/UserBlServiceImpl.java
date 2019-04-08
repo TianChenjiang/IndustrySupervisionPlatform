@@ -27,8 +27,8 @@ public class UserBlServiceImpl implements UserBlService {
 
     @Override
     public UpdateUserByIdResponse updateUserById(UpdateUserByIdParameter parameter) {
-        User res = userDataAccessService.GetUserById(parameter.getId());
-        return new UpdateUserByIdResponse(res.getId());
+        User res = userDataAccessService.UpdateUserById(parameter.getId(), parameter.getPhone(), parameter.getWx_id());
+        return new UpdateUserByIdResponse(res.getId(), res.getPhone(), res.getWx_id());
     }
 
     @Override

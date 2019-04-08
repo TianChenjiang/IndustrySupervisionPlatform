@@ -26,6 +26,6 @@ public class ProductionBlServiceImpl implements ProductionBlService {
     @Override
     public UpdateProductionByIdResponse updateProductionById(UpdateProductionByIdParameter parameter) {
         Production res = productionDataAccessService.UpdateProductionById(parameter.getId(), parameter.getDate(), parameter.getData());
-        return new UpdateProductionByIdResponse(res.getId());
+        return new UpdateProductionByIdResponse(res.getId(), res.getDate(), res.getData());
     }
 }

@@ -21,7 +21,7 @@ public class AdminBlServiceImpl implements AdminBlService {
     @Override
     public UpdateAdminByIdResponse updateAdminById(UpdateAdminByIdParameter parameter) {
         Admin res = adminDataAccessService.UpdateAdminById(parameter.getId(), parameter.getWx_id(), parameter.getPhone());
-        return new UpdateAdminByIdResponse(res.getId());
+        return new UpdateAdminByIdResponse(res.getId(), res.getPhone(), res.getWx_id());
     }
 
 
