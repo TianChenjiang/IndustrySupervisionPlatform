@@ -4,7 +4,9 @@ import dachuang.industry.supervision.backend.platform.dataaccess.dao.AdminDao;
 import dachuang.industry.supervision.backend.platform.dataaccess.serviceinterface.AdminDataAccessService;
 import dachuang.industry.supervision.backend.platform.entity.Admin;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
+@Service
 public class AdminDataAccessServiceImpl implements AdminDataAccessService {
     private final AdminDao adminDao;
     @Autowired

@@ -4,7 +4,9 @@ import dachuang.industry.supervision.backend.platform.dataaccess.dao.UserDao;
 import dachuang.industry.supervision.backend.platform.dataaccess.serviceinterface.UserDataAccessService;
 import dachuang.industry.supervision.backend.platform.entity.User;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
+@Service
 public class UserDataAccessServiceImpl implements UserDataAccessService {
     private final UserDao userDao;
     @Autowired

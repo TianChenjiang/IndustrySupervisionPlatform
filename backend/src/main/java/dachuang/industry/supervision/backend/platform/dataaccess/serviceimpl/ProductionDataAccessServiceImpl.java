@@ -4,7 +4,9 @@ import dachuang.industry.supervision.backend.platform.dataaccess.dao.ProductionD
 import dachuang.industry.supervision.backend.platform.dataaccess.serviceinterface.ProductionDataAccessService;
 import dachuang.industry.supervision.backend.platform.entity.Production;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
+@Service
 public class ProductionDataAccessServiceImpl implements ProductionDataAccessService {
     private final ProductionDao productionDao;
     @Autowired
@@ -18,12 +20,12 @@ public class ProductionDataAccessServiceImpl implements ProductionDataAccessServ
     }
 
     @Override
-    public Production UpdateProductionById(int id) {
-        return productionDao.save(new Production(id));
+    public Production UpdateProductionById(int id, int date, String data) {
+        return productionDao.save(new Production(id, date, data));
     }
 
     @Override
-    public Production InsertProductionById(int id) {
-        return productionDao.save(new Production(id));
+    public Production InsertProductionById(int id, int date, String data) {
+        return productionDao.save(new Production(id, date, data));
     }
 }

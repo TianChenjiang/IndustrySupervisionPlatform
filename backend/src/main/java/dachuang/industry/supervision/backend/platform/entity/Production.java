@@ -13,8 +13,16 @@ public class Production {
     @Column(name = "id")
     private int id;
 
+    @Column(name = "date")
+    private int date;
+
+    @Column(name = "data")
+    private String data;
+
     public Production(){}
-    public Production(int id){
+    public Production(int id, int date, String data){
         this.id = id;
+        this.date = date;
+        this.data = data;
     }
 }
