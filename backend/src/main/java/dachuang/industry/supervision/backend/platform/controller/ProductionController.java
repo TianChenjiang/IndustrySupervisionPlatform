@@ -1,10 +1,9 @@
 package dachuang.industry.supervision.backend.platform.controller;
 
-import dachuang.industry.supervision.backend.platform.bl.parameter.admin.UpdateAdminByIdParameter;
-import dachuang.industry.supervision.backend.platform.bl.parameter.production.UpdateProductionByIdParameter;
-import dachuang.industry.supervision.backend.platform.bl.response.production.GetProductionByIdResponse;
-import dachuang.industry.supervision.backend.platform.bl.response.production.UpdateProductionByIdResponse;
-import dachuang.industry.supervision.backend.platform.bl.serviceinterface.ProductionBlService;
+import dachuang.industry.supervision.backend.platform.parameter.production.UpdateProductionByIdParameter;
+import dachuang.industry.supervision.backend.platform.response.production.GetProductionByIdResponse;
+import dachuang.industry.supervision.backend.platform.response.production.UpdateProductionByIdResponse;
+import dachuang.industry.supervision.backend.platform.blservice.ProductionBlService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

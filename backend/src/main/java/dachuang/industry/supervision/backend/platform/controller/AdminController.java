@@ -1,10 +1,10 @@
 package dachuang.industry.supervision.backend.platform.controller;
 
-import dachuang.industry.supervision.backend.platform.bl.parameter.admin.InsertAdminParameter;
-import dachuang.industry.supervision.backend.platform.bl.parameter.admin.UpdateAdminByIdParameter;
-import dachuang.industry.supervision.backend.platform.bl.response.admin.InsertAdminResponse;
-import dachuang.industry.supervision.backend.platform.bl.response.admin.UpdateAdminByIdResponse;
-import dachuang.industry.supervision.backend.platform.bl.serviceinterface.AdminBlService;
+import dachuang.industry.supervision.backend.platform.parameter.admin.InsertAdminParameter;
+import dachuang.industry.supervision.backend.platform.parameter.admin.UpdateAdminByIdParameter;
+import dachuang.industry.supervision.backend.platform.response.admin.InsertAdminResponse;
+import dachuang.industry.supervision.backend.platform.response.admin.UpdateAdminByIdResponse;
+import dachuang.industry.supervision.backend.platform.blservice.AdminBlService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

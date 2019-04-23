@@ -19,11 +19,19 @@ public class Admin {
     @Column(name = "phone")
     private String phone;
 
+    @Column(name = "username")
+    private String username;
+
+    @Column(name = "password")
+    private String password;
+
     public Admin(){
     }
-    public Admin(int id, String wx_id, String phone){
+    public Admin(int id, String wx_id, String phone, String username, String password){
         this.id = id;
         this.wx_id = wx_id;
         this.phone = phone;
+        this.username = username;
+        this.password = password;
     }
 }
