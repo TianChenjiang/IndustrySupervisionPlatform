@@ -1,20 +1,41 @@
-<view class='container' >
-  <block wx:for='{{buttonlist}}' wx:for-item='item'>
-    <button class='buttonstyle {{item.color}}' bindtap='{{item.func}}'>
-      <text class='title'>{{item.title}}</text>
-      <text class='detail'>{{item.detail}}</text>
+<view wx:if="{{isHide}}">
+  <view wx:if="{{canIUse}}" >
+    <view class='header'>
+      <!-- <image src='../images/wx_login.png'></image> -->
+      <open-data type="userAvatarUrl"></open-data>
+    </view>
+
+    <view class='content'>
+      <view>申请获取以下权限</view>
+      <text>获得你的公开信息(昵称，头像等)</text>
+    </view>
+
+    <button class='bottom' type='primary' open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="bindGetUserInfo" >
+        授权登录
     </button>
-  </block>
-  <!-- <button class='buttonstyle red'>
-    <text class='title'>设备维护监测\n</text>
-    <text class='detail'>查看设备状态详细数据</text>
-  </button>
-  <button class='buttonstyle blue'>
-    <text class='title'>工位Ⅰ监测\n</text>
-    <text class='detail'>查看工位Ⅰ到达产品数量等详细数据</text>
-  </button>
-  <button class='buttonstyle yellow'>
-    <text class='title'>工位Ⅱ监测\n</text>
-    <text class='detail'>查看工位2到达产品数量等详细数据</text>
-  </button> -->
+  </view>
+  <view wx:else>请升级微信版本</view>
+</view>
+
+<view wx:else>
+  <view class='container' >
+    <block wx:for='{{buttonlist}}' wx:for-item='item'>
+      <button class='buttonstyle {{item.color}}' bindtap='{{item.func}}'>
+        <text class='title'>{{item.title}}</text>
+        <text class='detail'>{{item.detail}}</text>
+      </button>
+    </block>
+    <!-- <button class='buttonstyle red'>
+      <text class='title'>设备维护监测\n</text>
+      <text class='detail'>查看设备状态详细数据</text>
+    </button>
+    <button class='buttonstyle blue'>
+      <text class='title'>工位Ⅰ监测\n</text>
+      <text class='detail'>查看工位Ⅰ到达产品数量等详细数据</text>
+    </button>
+    <button class='buttonstyle yellow'>
+      <text class='title'>工位Ⅱ监测\n</text>
+      <text class='detail'>查看工位2到达产品数量等详细数据</text>
+    </button> -->
+  </view>
 </view>

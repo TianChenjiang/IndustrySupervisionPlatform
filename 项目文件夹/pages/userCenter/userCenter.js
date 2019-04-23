@@ -5,25 +5,19 @@ Page({
    * 页面的初始数据
    */
   data: {
-    showName:null,
-    showIdentity:null
+    nickname: null,
+    identity: '普通用户'
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    if (app.globalData.hasLogin == false){
-      wx.redirectTo({
-        url: '../login/login',
-      })
-    }else{
-      this.setData({
-        showName:app.globalData.userinfo.username,
-        showIdentity:app.globalData.userinfo.identity
-      })
-      console.log(this.data.showName)
-    }
+    
+    // this.setData({
+    //   nickname: app.globalData.userInfo.nickName,
+    //   // identity: app.globalData.userinfo.identity
+    // })
   },
 
   /**
@@ -37,7 +31,9 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    
+    this.setData({
+      nickname: app.globalData.userInfo.nickName,
+    })
   },
 
   /**

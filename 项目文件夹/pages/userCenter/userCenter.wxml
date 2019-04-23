@@ -1,7 +1,7 @@
 <view class='u-container'>
   <view class='block1'>
     <image src='../images/userAvatar_two.jpg' class='avatar'></image>
-    <text class='username'>{{showName}}</text>
+    <text class='username'>{{nickname}}</text>
   </view>
 
   <view class='identity' style='color:#999999' wx:if='{{showIdentity==user}}'>普通用户</view>

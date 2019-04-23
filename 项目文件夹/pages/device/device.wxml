@@ -1,3 +1,14 @@
 <!-- <view>
   <button class='a' style='background-image:url(../../images/产量.jpg)'>aaa</button>
 </view> -->
+<view class="container">
+    <view class='IDInput'>
+      <view style='color:green'>设备ID</view>
+      <input placeholder='请输入设备ID' bindinput='deviceIdInput' class='input'></input>
+    </view>
+    <canvas canvas-id="lineCanvas1" disable-scroll="true" class="canvas" bindtouchstart="touchHandler1"></canvas>
+        <text>\n</text>
+    <canvas canvas-id="lineCanvas2" disable-scroll="true" class="canvas" bindtouchstart="touchHandler2"></canvas>
+    <text>\n\n</text>
+    <button type="primary" bindtap="updateData">更新温湿度</button>
+</view>
