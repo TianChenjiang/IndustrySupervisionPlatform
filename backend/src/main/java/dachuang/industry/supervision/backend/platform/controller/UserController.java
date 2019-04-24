@@ -38,6 +38,13 @@ public class UserController {
         }
     }
 
+    @RequestMapping(value = "register", method = RequestMethod.GET)
+    @ResponseBody
+    public ResponseEntity<Response> register
+            (@RequestParam("username")String username, @RequestParam("password")String password){
+        UserLoginResponse userLoginResponse = userBlService.
+    }
+
     @RequestMapping(value = "GetUserById", method = RequestMethod.GET)
     public GetUserByIdResponse getUserById(@RequestParam(name = "id", defaultValue = "0") int id){
         return userBlService.getUserById(id);

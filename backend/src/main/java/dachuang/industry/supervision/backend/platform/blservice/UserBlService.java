@@ -14,4 +14,5 @@ public interface UserBlService {
     InsertUserResponse insertUser(InsertUserParameter parameter);
     UserLoginResponse login(String username, String password) throws WrongUsernameOrPasswordException;
 
+
 }

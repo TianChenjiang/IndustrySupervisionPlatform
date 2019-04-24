@@ -10,6 +10,8 @@ import dachuang.industry.supervision.backend.platform.blservice.UserBlService;
 import dachuang.industry.supervision.backend.platform.dataservice.UserDataAccessService;
 import dachuang.industry.supervision.backend.platform.entity.User;
 import dachuang.industry.supervision.backend.platform.exception.WrongUsernameOrPasswordException;
+import dachuang.industry.supervision.backend.platform.security.jwt.JwtService;
+import dachuang.industry.supervision.backend.platform.security.jwt.JwtUser;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
